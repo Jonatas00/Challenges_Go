@@ -22,10 +22,6 @@ func main() {
 	// Prints for test
 	fmt.Println(DeclareWinner(Fighter{"Lew", 10, 2}, Fighter{"Harry", 5, 4}, "Lew"))
 	fmt.Println(DeclareWinner(Fighter{"Lew", 10, 2}, Fighter{"Harry", 5, 4}, "Harry"))
-	fmt.Println(DeclareWinner(Fighter{"Harald", 20, 5}, Fighter{"Harry", 5, 4}, "Harry"))
-	fmt.Println(DeclareWinner(Fighter{"Harald", 20, 5}, Fighter{"Harry", 5, 4}, "Harald"))
-	fmt.Println(DeclareWinner(Fighter{"Jerry", 30, 3}, Fighter{"Harald", 20, 5}, "Jerry"))
-	fmt.Println(DeclareWinner(Fighter{"Jerry", 30, 3}, Fighter{"Harald", 20, 5}, "Harald"))
 }
 
 func DeclareWinner(fighter1 Fighter, fighter2 Fighter, firstAttacker string) string {
@@ -39,7 +35,7 @@ func DeclareWinner(fighter1 Fighter, fighter2 Fighter, firstAttacker string) str
 		sAttack = &fighter1
 	}
 
-	for fAttack.Health >= 0 || sAttack.Health >= 0{
+	for fAttack.Health >= 0 || sAttack.Health >= 0 {
 		sAttack.Health -= fAttack.DamagePerAttack
 		if sAttack.Health <= 0 { return fAttack.Name }
 		
