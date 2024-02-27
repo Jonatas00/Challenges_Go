@@ -12,7 +12,6 @@ func main() {
 	fmt.Println(RoundToNext5(-2))
 }
 
-
 func RoundToNext5(n int) int {
 	if n >= 0 {
 		if n % 5 != 0 {
