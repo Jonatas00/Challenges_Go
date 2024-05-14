@@ -14,6 +14,6 @@ func main() {
 func SquareSum(numbers []int) (resp int) {
 	for _, n := range numbers {
 		resp += n * n
-	} 
+	}
 	return resp
 }

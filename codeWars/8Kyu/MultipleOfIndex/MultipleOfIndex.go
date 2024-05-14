@@ -1,6 +1,6 @@
 package main
 
-// Return a new array consisting of elements which are multiple of their own 
+// Return a new array consisting of elements which are multiple of their own
 // index in input array (length > 1).
 
 func main() {
@@ -10,7 +10,7 @@ func main() {
 
 func multipleOfIndex(ints []int) (multiples []int) {
 	for i, v := range ints {
-		if i > 0 && v % i == 0 {
+		if i > 0 && v%i == 0 {
 			multiples = append(multiples, v)
 		}
 	}

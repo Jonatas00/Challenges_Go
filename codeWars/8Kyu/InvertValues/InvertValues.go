@@ -18,7 +18,7 @@ func main() {
 func Invert(arr []int) []int {
 	var newArr []int
 	for _, v := range arr {
-		newArr = append(newArr, v * -1)
+		newArr = append(newArr, v*-1)
 	}
-  return newArr
+	return newArr
 }

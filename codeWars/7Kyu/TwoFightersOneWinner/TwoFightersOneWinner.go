@@ -37,10 +37,14 @@ func DeclareWinner(fighter1 Fighter, fighter2 Fighter, firstAttacker string) str
 
 	for fAttack.Health >= 0 || sAttack.Health >= 0 {
 		sAttack.Health -= fAttack.DamagePerAttack
-		if sAttack.Health <= 0 { return fAttack.Name }
-		
+		if sAttack.Health <= 0 {
+			return fAttack.Name
+		}
+
 		fAttack.Health -= sAttack.DamagePerAttack
-		if fAttack.Health <= 0 { return sAttack.Name }
+		if fAttack.Health <= 0 {
+			return sAttack.Name
+		}
 	}
 
 	return "Untouchable return OMEGALUL"
